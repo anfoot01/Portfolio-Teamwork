@@ -1,0 +1,47 @@
+@media screen and (max-width: 1115px) {
+    .navigation-toggle {
+        z-index: 1000;
+        margin-top: 38px;
+        padding-left: -51px;
+        right: 0px;
+        left: 735px;
+        display: block;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+        margin: 0;
+        left: 60px;
+        top: 35px;
+    }
+    .navigation {
+        position: fixed;
+        right: 0;
+        top: 0px;
+        z-index: 976;
+        background-color: var(--card-bg);
+        height: 86px;
+        width: 100%;
+    }
+    .navigation-list {
+        position: relative;
+        list-style: none;
+        top: 0px;
+        left: -15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        gap: 10px;
+        li {
+            width: 30rem;
+            height: 30rem;
+        }
+    }
+    .navigation-menu {
+        margin-top: 0;
+    }
+    main {
+        margin-top: 86px;
+    }
+}

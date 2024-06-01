@@ -1,0 +1,91 @@
+.portfolio {
+    &__title {
+        text-align: center;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 32rem;
+        line-height: 124%;
+        text-transform: capitalize;
+        color: var(--main-txt);
+        margin-bottom: 33rem;
+    }
+
+    &__desc {
+        text-align: center;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 15rem;
+        line-height: 160%;
+        text-transform: capitalize;
+        text-align: center;
+        color: var(--secondary-txt);
+        max-width: 438rem;
+        margin-inline: auto;
+    }
+
+    &__categories {
+        list-style: none;
+        display: flex;
+        gap: 37px;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 18rem;
+        line-height: 124%;
+        text-transform: capitalize;
+        color: var(--main-txt);
+        font-family: var(--font-family);
+        @include tablet{
+            gap: 25px;
+        }
+    }
+    &__category{
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+    }
+    &__category:hover{
+        color: var(--highlight);
+    }
+
+    &__items {
+        margin-top: 50rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 310px);
+        gap: 20rem;
+        justify-content: center;
+        margin-inline: auto;
+        @include mobile {
+            margin-top: 30rem;
+            grid-template-columns: 1fr;
+            
+        }
+    }
+
+    &__item {
+        background: var(--main-bg);
+        position: relative;
+        img{
+           width: 100%;
+           height: 100%;
+           box-sizing: border-box;
+        }
+        &__hover-plus{
+            cursor: pointer;
+            font-size: 60rem;
+            font-weight: 900;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: all .2s ease-in-out;
+        }
+        &__hover-plus:hover{
+            opacity: 1;
+            background: rgba(255, 180, 0, 0.95);
+        }
+    }
+}

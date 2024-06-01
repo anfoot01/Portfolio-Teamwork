@@ -1,0 +1,97 @@
+.blog {
+    margin: 70rem 0;
+
+    &__title {
+        text-align: center;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 32rem;
+        line-height: 124%;
+        text-transform: capitalize;
+        color: var(--main-txt);
+        margin-bottom: 33rem;
+    }
+
+    &__desc {
+        text-align: center;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 15rem;
+        line-height: 160%;
+        text-transform: capitalize;
+        text-align: center;
+        color: var(--secondary-txt);
+        max-width: 438rem;
+        margin-inline: auto;
+    }
+
+    &__items {
+        margin-top: 50rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 20rem;
+
+        @include mobile {
+            margin-top: 30rem;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        background: var(--main-bg);
+
+        &__img {
+            text-align: center;
+
+            img {
+                box-sizing: border-box;
+                width: 100%;
+            }
+        }
+
+        &__text {
+            margin: 25rem 17rem 25rem 25rem;
+
+            @include mobile {
+                margin: 15rem 10rem 15rem 15rem;
+            }
+
+            &__title {
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 18rem;
+                line-height: 124%;
+                text-transform: capitalize;
+                color: var(--main-txt);
+                margin-bottom: 8rem;
+            }
+
+            &__desc {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 15rem;
+                line-height: 160%;
+                text-transform: capitalize;
+                color: var(--secondary-txt);
+                margin-bottom: 9rem;
+            }
+
+            &__link {
+                display: flex;
+                align-items: center;
+                gap: 8rem;
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 18rem;
+                line-height: 124%;
+                text-transform: capitalize;
+                color: var(--highlight);
+                text-decoration: none;
+
+                svg {
+                    fill: var(--highlight);
+                }
+            }
+        }
+    }
+}

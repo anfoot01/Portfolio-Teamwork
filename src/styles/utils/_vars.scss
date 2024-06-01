@@ -1,0 +1,33 @@
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap';
+
+// breakpoints
+$desktop-small: 1200px;
+$tablet: 992px;
+$tablet-small: 768px;
+$mobile: 576px;
+:root {
+  // font
+    --font-family: "Inter", sans-serif;
+    --second-family: "Poppins", sans-serif;
+    --third-family: "Roboto", sans-serif;
+    // color
+    --card-bg: white;
+    --highlight: #ffb400;
+    --main-txt: #2b2b2b;
+    --secondary-txt: #767676;
+    --main-bg: #fff;
+    --cont-bg: #e4e6eb;
+    --input-bg: #f0f0f6;
+    --sidebar-border: 1.50px solid #f0f0f6;
+
+}
+
+body.dark{
+  --card-bg: #242526;
+  --highlight: #ffb400;
+  --main-txt: #fff;
+  --secondary-txt: #e4e6eb;
+  --main-bg: #2b2b2b;
+  --cont-bg: #18191a;
+  --input-bg: #767676;
+}

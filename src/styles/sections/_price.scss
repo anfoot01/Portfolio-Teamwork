@@ -1,0 +1,147 @@
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 430px;
+        padding-bottom: 50px;
+        h1 {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 124%;
+            color: var(--main-txt);
+        }
+        p {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 160%;
+            text-align: center;
+            color: var(--secondary-txt);
+        }
+    }
+    &__cards {
+        display: flex;
+        gap: 21px;
+        @media screen and (max-width:1166px) {
+            flex-direction: column;
+        }
+        &__card {
+            &.popular {
+                padding: 25px 24px 25px 31px;
+            }
+            background: var(--main-bg);
+            padding: 54px 24px 25px 31px;
+            display: flex;
+            flex-direction: column;
+            &__title {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            span {
+                display: flex;
+                align-items: baseline;
+                text-align: center;
+                h1 {
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 124%;
+                    color: var(--main-txt);;
+                    padding-right: 10px;
+                }
+                h4 {
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 160%;
+                    color: var(--main-txt);;
+                    text-align: end;
+                }
+            }
+            h2 {
+                font-family: var(--font-family);
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 124%;
+                color: var(--main-txt);;
+            }
+            p {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 160%;
+                text-align: center;
+                color: var(--secondary-txt);
+                max-width: 248px;
+                padding-bottom: 21px;
+            }
+            &__perks {
+                display: flex;
+                align-items: left;
+                gap: 16px;
+                flex-direction: column;
+                list-style: none;
+                li {
+                    display: flex;
+                    gap: 15px;
+                }
+                &__included {
+                    font-family: var(--font-family);
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 160%;
+                    color: var(--main-txt);;
+                }
+                &__non-included {
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 160%;
+                    text-transform: capitalize;
+                    color: var(--secondary-txt);
+                }
+            }
+            &__pricebtn {
+                margin-top: 21px;
+                border-radius: 30px;
+                box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+                background: var(--input-bg);
+                border: none;
+                padding: 0;
+                cursor: pointer;
+                outline: inherit;
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 14px;
+                text-transform: capitalize;
+                color: var(--main-txt);;
+                padding: 11px 41px;
+                &.popular {
+                    background: #ffb400;
+                }
+            }
+            &__popular {
+                margin: -25px -24px 25px -31px;
+                padding: 3px 0 3px 0;
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 160%;
+                text-transform: capitalize;
+                color: var(--main-txt);;
+                background: #ffb400;
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

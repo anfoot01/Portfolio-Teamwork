@@ -1,0 +1,28 @@
+.footer {
+  padding-top: 70px;
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 70px;
+  }
+
+  &__copyright {
+    background: var(--card-bg);
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: var(--main-txt);
+
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}

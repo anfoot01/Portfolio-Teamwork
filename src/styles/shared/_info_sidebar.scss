@@ -1,0 +1,207 @@
+.info-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  max-width: 305rem;
+  padding: 50rem 46rem 25rem 40rem;
+  height: calc(100vh - 70rem);
+  overflow-y: auto;
+  background: var(--main-bg);
+  text-align: center;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+  &__img {
+    width: 150rem;
+    height: 150rem;
+    position: relative;
+    margin-inline: auto;
+    margin-bottom: 32rem;
+  }
+
+  &__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .online-dot {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 100%;
+    background-color: #7eb942;
+    box-shadow: 0 4rem 10rem 0 rgba(0, 0, 0, 0.15);
+    position: absolute;
+    bottom: 18rem;
+    right: 10rem;
+  }
+
+  &__name {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18rem;
+    line-height: 124%;
+    text-transform: capitalize;
+    color: var(--main-txt);;
+    margin-bottom: 15rem;
+  }
+
+  &__profession {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15rem;
+    line-height: 160%;
+    text-transform: capitalize;
+    color: var(--secondary-txt);
+    margin-bottom: 15rem;
+  }
+
+  &-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+    margin-bottom: 25rem;
+
+    &__icon {
+      border-radius: 100%;
+      background-color: var(--highlight);
+      width: 24rem;
+      height: 24rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &-date {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    padding: 25rem 0;
+    border-top: var(--sidebar-border);
+    border-bottom: var(--sidebar-border);
+    &__group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__title {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 15rem;
+      line-height: 160%;
+      text-transform: capitalize;
+      color: var(--main-txt);;
+      padding: 0 6rem;
+      background: var(--highlight);
+    }
+
+    &__desc {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 15rem;
+      line-height: 160%;
+      text-transform: capitalize;
+      color: var(--main-txt);;
+    }
+  }
+
+  .c-secondary {
+    color: #7eb942;
+  }
+
+  &-skills {
+    padding: 25rem 0;
+    text-align: left;
+    border-bottom: var(--sidebar-border);
+
+    &__title {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 18rem;
+      line-height: 124%;
+      text-transform: capitalize;
+      color: var(--main-txt);;
+      margin-bottom: 15rem;
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__desc {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 15rem;
+      line-height: 160%;
+      text-transform: capitalize;
+      color: var(--secondary-txt);
+    }
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 4rem;
+    background: var(--main-bg);
+    border-radius: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 9rem;
+    border: 0.5rem solid var(--highlight);
+    border-radius: 30rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .progress-bar:last-child {
+    margin-bottom: 0;
+  }
+
+  .progress {
+    height: 2rem;
+    background: var(--highlight);
+    margin: 0 1rem;
+    border-radius: inherit;
+  }
+
+  &-extra-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    &__desc {
+      display: flex;
+      align-items: center;
+      gap: 15rem;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 15rem;
+      line-height: 160%;
+      text-transform: capitalize;
+      color: var(--secondary-txt);
+    }
+  }
+
+  .download-cv-btn {
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    margin-top: 25rem;
+    padding: 10rem 40rem;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14rem;
+    text-transform: uppercase;
+    background: var(--highlight);
+    color: var(--main-txt);;
+    display: inline-flex;
+    align-items: center;
+    gap: 19rem;
+  }
+}

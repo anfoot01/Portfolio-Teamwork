@@ -1,0 +1,220 @@
+body.dark .navigation-toggle{
+  color: var(--highlight);
+}
+
+.navigation {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--card-bg);
+  height: 100vh;
+  width: 108rem;
+
+  &-toggle{
+    margin: 50rem auto;
+    display: block;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+
+    &:hover{
+      color: var(--highlight);
+    }
+
+  }
+
+  &-menu{
+    margin-top: 124rem;
+  }
+
+  &-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 43rem;
+
+    li{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40rem;
+      height: 40rem;
+      cursor: pointer;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      background-color: var(--input-bg);
+
+      &.active{
+        background-color: var(--highlight);
+        a svg{
+          color: black;
+        }
+
+      }
+
+      &:hover{
+        background-color: var(--highlight);
+        a svg{
+          color: black;
+        }
+      }
+
+      a svg{
+        color: var(--secondary-txt);
+      }
+    }
+  }
+}
+
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+}
+
+[data-tooltip]::before,
+[data-tooltip]::after {
+  text-transform: none;
+  font-family: var(--font-family);
+  font-size: 12rem;
+  line-height: 15rem;
+  font-weight: 500;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+[data-tooltip]::before {
+  content: '';
+  border: 6px solid transparent;
+  z-index: 101;
+}
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  text-align: center;
+  min-width: 3em;
+  max-width: 21em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 6px 8px;
+  border-radius: 3px;
+  background: #333333;
+  color: #fff;
+  z-index: 100;
+}
+[data-tooltip]:hover::before,
+[data-tooltip]:hover::after {
+  display: block;
+}
+[data-tooltip='']::before,
+[data-tooltip='']::after {
+  display: none !important;
+}
+[data-tooltip]:not([data-flow])::before,
+[data-tooltip][data-flow^="top"]::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: #333333;
+}
+[data-tooltip]:not([data-flow])::after,
+[data-tooltip][data-flow^="top"]::after {
+  bottom: calc(100% + 5px);
+}
+[data-tooltip]:not([data-flow])::before,
+[data-tooltip]:not([data-flow])::after,
+[data-tooltip][data-flow^="top"]::before,
+[data-tooltip][data-flow^="top"]::after {
+  left: 50%;
+  transform: translate(-50%, -.4em);
+}
+[data-tooltip][data-flow^="bottom"]::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: var(--main-txt);
+}
+[data-tooltip][data-flow^="bottom"]::after {
+  top: calc(100% + 5px);
+}
+[data-tooltip][data-flow^="bottom"]::before,
+[data-tooltip][data-flow^="bottom"]::after {
+  left: 50%;
+  transform: translate(-50%, .4em);
+}
+[data-tooltip][data-flow^="left"]::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: var(--main-txt);
+  left: calc(0em - 5px);
+  transform: translate(-.5em, -50%);
+}
+[data-tooltip][data-flow^="left"]::after {
+  top: 50%;
+  right: calc(100% + 5px);
+  transform: translate(-.4em, -50%);
+}
+[data-tooltip][data-flow^="right"]::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: var(--main-txt);
+  right: calc(0em - 7px);
+  transform: translate(.4em, -50%);
+}
+[data-tooltip][data-flow^="right"]::after {
+  top: 50%;
+  left: calc(100% + 5px);
+  transform: translate(.5em, -50%);
+}
+@keyframes tooltip-vert {
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+@keyframes tooltip-horz {
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+[data-tooltip]:not([data-flow]):hover::before,
+[data-tooltip]:not([data-flow]):hover::after,
+[data-tooltip][data-flow^="top"]:hover::before,
+[data-tooltip][data-flow^="top"]:hover::after,
+[data-tooltip][data-flow^="bottom"]:hover::before,
+[data-tooltip][data-flow^="bottom"]:hover::after {
+  animation: tooltip-vert .5s ease-out forwards;
+}
+[data-tooltip][data-flow^="left"]:hover::before,
+[data-tooltip][data-flow^="left"]:hover::after,
+[data-tooltip][data-flow^="right"]:hover::before,
+[data-tooltip][data-flow^="right"]:hover::after {
+  animation: tooltip-horz .5s ease-out forwards;
+}
+.active[data-tooltip]::before,
+.active[data-tooltip]::after {
+  display: block;
+  opacity: 1;
+}
+
+/* Стили для анимации тултипа при активации */
+.active[data-tooltip]:not([data-flow])::before,
+.active[data-tooltip]:not([data-flow])::after,
+.active[data-tooltip][data-flow^="top"]::before,
+.active[data-tooltip][data-flow^="top"]::after,
+.active[data-tooltip][data-flow^="bottom"]::before,
+.active[data-tooltip][data-flow^="bottom"]::after {
+  animation: tooltip-vert .5s ease-out forwards;
+}
+
+.active[data-tooltip][data-flow^="left"]::before,
+.active[data-tooltip][data-flow^="left"]::after,
+.active[data-tooltip][data-flow^="right"]::before,
+.active[data-tooltip][data-flow^="right"]::after {
+  animation: tooltip-horz .5s ease-out forwards;
+}
