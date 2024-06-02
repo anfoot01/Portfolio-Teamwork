@@ -41,6 +41,9 @@
     &__category{
         transition: all .2s ease-in-out;
         cursor: pointer;
+        @include mobile{
+            display: none;
+        }
     }
     &__category:hover{
         color: var(--highlight);

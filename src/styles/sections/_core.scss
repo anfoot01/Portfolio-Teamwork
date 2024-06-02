@@ -11,11 +11,17 @@ main {
     background-color: var(--cont-bg);
     padding-left: 305px;
     padding-right: 105px;
+    @include mobile{
+       padding: 10rem;
+    }
 }
 
 @media screen and (max-width: 1115px) {
     .container {
         padding-left: 85px;
+        @include mobile{
+            padding: 10rem;
+         }
     }
 
 }
